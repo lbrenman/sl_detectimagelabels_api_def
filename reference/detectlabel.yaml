@@ -1,0 +1,29 @@
+openapi: 3.0.0
+x-stoplight:
+  id: k7hnmdslxpqml
+info:
+  title: detectlabel
+  version: '1.0'
+  description: Detect labels in image
+  contact:
+    name: Leor Brenman
+    email: lbrenman99@hotmail.com
+    url: www.leorbrenman.com
+  license:
+    name: Apache 2.0
+    url: www.leorbrenman.com
+servers:
+  - url: 'http://localhost:8080'
+    description: Local
+paths: {}
+components:
+  schemas: {}
+  securitySchemes:
+    apikey:
+      name: apikey
+      type: apiKey
+      in: query
+security:
+  - apikey: []
+tags:
+  - name: detectLabel
