@@ -13,9 +13,42 @@ info:
     name: Apache 2.0
     url: www.leorbrenman.com
 servers:
-  - url: 'http://localhost:8080'
+  - url: 'http://localhost:8080/api'
     description: Local
-paths: {}
+paths:
+  /detectlabels:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - detectLabel
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/detectLabelResponse.yaml
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: get-detectlabels
+      description: Detect labels in your (Base64 encoded) image
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+        description: ''
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: image
+          description: Base64 encoded image to detect labels in
 components:
   schemas: {}
   securitySchemes:
@@ -27,3 +60,4 @@ security:
   - apikey: []
 tags:
   - name: detectLabel
+    description: Detect labels
