@@ -32,8 +32,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: ../models/error.yaml
       description: Detect labels in Base64 encoded image
       requestBody:
         content:

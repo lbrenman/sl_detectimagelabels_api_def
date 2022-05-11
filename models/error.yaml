@@ -1,0 +1,34 @@
+type: object
+x-examples:
+  example-1:
+    message: The security token included in the request is invalid.
+    code: UnrecognizedClientException
+    time: '2022-05-11T18:18:23.383Z'
+    requestId: e2a20351-c7aa-45af-b6e4-019fde4c0942
+    statusCode: 400
+    retryable: false
+    retryDelay: 87.58905672568913
+examples:
+  - message: string
+    code: string
+    time: string
+    requestId: string
+    statusCode: 0
+    retryable: true
+    retryDelay: 0
+properties:
+  message:
+    type: string
+  code:
+    type: string
+  time:
+    type: string
+    format: date-time
+  requestId:
+    type: string
+  statusCode:
+    type: integer
+  retryable:
+    type: boolean
+  retryDelay:
+    type: number
