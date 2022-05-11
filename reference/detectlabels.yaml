@@ -37,12 +37,6 @@ paths:
                 properties: {}
       operationId: get-detectlabels
       description: Detect labels in your (Base64 encoded) image
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-        description: ''
       parameters:
         - schema:
             type: string
