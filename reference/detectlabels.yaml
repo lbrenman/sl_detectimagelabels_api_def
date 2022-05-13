@@ -18,7 +18,7 @@ servers:
 paths:
   /detectlabels:
     post:
-      summary: ''
+      summary: Detect Labels
       operationId: post-detectlabels
       responses:
         '200':
@@ -44,6 +44,9 @@ paths:
                   type: string
               required:
                 - image
+        description: Base64 Image
+      tags:
+        - detectLabel
 components:
   schemas: {}
   securitySchemes:
