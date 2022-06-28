@@ -15,6 +15,8 @@ info:
 servers:
   - url: 'http://localhost:8080/api'
     description: Local
+  - url: 'https://ldetectlabelsapi.herokuapp.com/api'
+    description: Heroku
 paths:
   /detectlabels:
     post:
